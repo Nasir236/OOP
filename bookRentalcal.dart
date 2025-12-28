@@ -21,6 +21,11 @@ class Book {
     print('Author: $author');
     print('Publication Year: $publicationYear');
   }
+
+  double calculateRentalCost(int days) {
+    double dailyRate = 10.0; // Example daily rate
+    return dailyRate * days; // Base implementation, to be overridden
+  }
 }
 
 class RentalBook extends Book {
@@ -32,8 +37,9 @@ class RentalBook extends Book {
     int publicationYear,
     this.rentalPricePerDay,
   ) : super(title, author, publicationYear);
-
+  @override
   double calculateRentalCost(int days) {
-    return rentalPricePerDay * days;
+    double dailyRate = 10.0; // Example daily rate
+    return super.calculateRentalCost(days) + (rentalPricePerDay * dailyRate);
   }
 }
