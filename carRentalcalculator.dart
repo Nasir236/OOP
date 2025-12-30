@@ -37,6 +37,6 @@ class Car extends Vechical {
   double calculateRentalCost(int days) {
     double dailyRate = 50.0; // Example daily rate
     return super.calculateRentalCost(days) +
-        20 * days; // Additional cost for car
+        dailyRate * days; // Additional cost for car
   }
 }
