@@ -1,17 +1,15 @@
-import 'dart:math';
-
 void main() {
-  Peron person = Peron("nasirzaib8587@gmail.com", "Khan12345");
-  person.displayinfo();
+  Person person = Person('nasirzaib8587@gmail.com', 'Khan12345');
+  person.displayInfo();
 }
 
-class Peron with Logger {
+class Person with Logger {
   String email, password;
 
-  Peron(this.email, this.password);
+  Person(this.email, this.password);
 
-  void displayinfo() {
-    log('User Email: ${email}, Password: ${password}' as num);
+  void displayInfo() {
+    log("Email: ${email} and is Password: ${password}");
   }
 }
 
