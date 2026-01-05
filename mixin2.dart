@@ -1,18 +1,16 @@
-import 'dart:math';
-
 void main() {
-  User user = User("Alice", 30);
+  User user = User('Alice', 30);
   user.displayInfo();
 }
 
-class User {
+class User with Logger {
   String name;
   int age;
 
   User(this.name, this.age);
 
   void displayInfo() {
-    log('Name: $name, Age: $age' as num);
+    log('Name: $name, Age: $age');
   }
 }
 
